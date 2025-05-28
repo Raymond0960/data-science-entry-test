@@ -1,0 +1,22 @@
+def check_divisibility(num, divisor):
+    """
+    - Check if num is divisible by divisor.
+    - Return True if divisible, False otherwise.
+    """
+    # Check if both are numbers (int or float) using isinstance
+    if not (isinstance(num, (int, float)) and isinstance(divisor, (int, float))):
+        return False
+
+    # Check if divisor is zero to avoid division by zero
+    if divisor == 0:
+        return False
+
+    # Use the modulus operator to check divisibility
+    if num % divisor == 0:
+        return True
+    else:
+        return False
+
+# Task 2 - Invoke the function
+print(check_divisibility(10, 2))  # Output: True
+print(check_divisibility(7, 3))   # Output: False

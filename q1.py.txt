@@ -1,0 +1,25 @@
+def swap(x, y):
+    """
+    - Swap the values of x and y using only x and y as variables.
+    - Return -1 if x and y are not numeric (int or float).
+    - Print the swapped values if both x and y are numeric.
+    """
+    numeric_types = [int, float]
+    types = [type(x), type(y)]
+    
+    i = 0
+    while i < 2:
+        if types[i] != int and types[i] != float:
+            return -1
+        i += 1
+
+    # Swap without any extra variables
+    x = x + y
+    y = x - y
+    x = x - y
+
+    print(x, y)
+
+# Task 2 - Invoke the function
+print(swap("Apple", 10))  # Should return -1
+print(swap(9, 17))        # Should print "17 9"

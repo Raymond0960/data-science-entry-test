@@ -1,0 +1,22 @@
+def string_reverse(s):
+    """
+    - Reverse the given string s.
+    - s must be a string.
+    - Return the reversed string.
+    """
+    # Check if s is a string using type comparison (no built-in)
+    if not isinstance(s, str):
+        return ""
+
+    reversed_str = ""
+    i = len(s) - 1
+    while i >= 0:
+        reversed_str = reversed_str + s[i]
+        i = i - 1
+
+    return reversed_str
+
+# Task 2 - Invoke the function
+print(string_reverse("Hello World"))  # Output: "dlroW olleH"
+print(string_reverse("Python"))       # Output: "nohtyP"
+
